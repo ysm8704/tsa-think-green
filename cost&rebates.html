@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Green</title>
+    <style>
+        /* Your existing styles remain unchanged */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            animation: fadeIn 1s ease-out;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #2ecc71;
+            padding: 1em;
+            text-align: center;
+            color: white;
+        }
+
+       
+
+        .main-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 2em auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+        }
+       
+        nav {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 1000px;
+            background-color: white;        
+            padding: 1.6em;
+            animation: slideInDown 1s ease-out;
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            padding: 0.01em 10.95em;
+            border-radius: 5px;
+        }
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            letter-spacing: 0.15em;
+            
+            display: inline-block;
+            padding: 5px 15px;
+            position: relative;
+            }
+        
+        nav a:after {    
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #000000;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+        font-weight: 500;
+        font-style: bold;
+        }
+
+        nav a:hover:after { 
+        width: 100%; 
+        left: 0; 
+        }
+        
+        section {
+            flex: 1;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .solution-section {
+            background-color: #ecf0f1;
+            padding: 3em;
+            margin: 2em 0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .solution-section img {
+            width: 100%;
+            max-width: 600px; /* Adjust the maximum width as needed */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-section div {
+            width: 50%;
+            text-align: left;
+        }
+
+        .solution-section h2 {
+            color: #3498db;
+        }
+
+        .solution-section p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        #importance-section {
+            background-color: #ecf0f1;
+            padding: 3em;
+            margin: 2em 0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #importance-section img {
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #importance-section div {
+            width: 50%;
+        }
+
+        #importance-section h2 {
+            color: #3498db;
+        }
+
+        #importance-section p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        
+        
+        /* New styles for additional content */
+        #costs-section {
+            background-color: #ecf0f1;
+            padding: 3em;
+            margin: 2em 0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #costs-section h2 {
+            color: #3498db;
+        }
+
+        #costs-section p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Apply the same animation to the new sections */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <nav class="navbar navbar-expand-lg">
+        
+    
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <a href="index.html">Home</a>
+            <a href="energysolutions.html">Home Solutions</a>
+            <a href="cost&rebates.html">Costs & Rebates</a>
+            <a href="greenliving.html">Clean/Green Energy Practices</a>
+            <a href="blog.html"> Blog/News</a>
+            <a href="aboutme.html"> About Me</a>
+        </div>
+    </nav>
+
+
+    <!-- New Costs Section -->
+    <section id="costs-section">
+        <h2>Breakdown of Costs and Incentives</h2>
+        <p>Welcome to our guide on the costs and incentives associated with green energy solutions for your home. As the demand for sustainable living grows, understanding the financial aspects of incorporating green technologies is important. In this section, we provide you with valuable insights into the investments and incentives available to Dallas area homeowners.
+        </p>
+    </section>
+
+    <!-- Existing Importance Section --> 
+    <section id="importance-section">
+        <img src="https://images.all-free-download.com/images/graphiclarge/solar_panels_191730.jpg" alt="Importance of Green Energy">
+        <div>
+            <h2>Solar Panel Costs </h2>
+            <p>The federal tax credit is the most considerable inducement to install solar panels for residences and commercial buildings. The federal tax credit currently covers 30% of the entire solar system installation cost. The tax credit amount then reduces your federal taxes. If the amount of taxes you owe is less than your tax credit, you can claim the credit over several years. Only those who pay federal income taxes are eligible for the federal tax credit. The tax credit will drop to 26% at the end of 2032. You want to take your time, even though there's no rush to obtain the maximum tax credit value.
+
+
+            </p>
+        </div>
+    </section>
+
+    <section id="importance-section">
+        <img src="https://t3.ftcdn.net/jpg/00/00/59/24/360_F_592434_3hDVJcuD11BdI6bdnakuh0WKcQrfyl.jpg" alt="Importance of Green Energy">
+        <div>
+            <h2>Wind Turbine Costs </h2>
+            <p>There is no installation cost for smaller wind turbines available for purchase online or in stores. To install them yourself, refer to the user manual or manufacturer-provided instructions. For larger turbines designed to power entire homes, installation expenses vary from $3,000 to $8,000 per kilowatt, totaling approximately $50,000 to $80,000 for a large house with a 10-kilowatt turbine. The installation of a commercial-grade wind turbine with a 2-megawatt output could reach up to $4 million.
+                </p>
+            
+        </div>
+    </section>
+
+    <section id="importance-section">
+        <img src="https://cdn.discordapp.com/attachments/1198375097191366717/1199559235340611656/Screenshot_2024-01-20_at_6.png?ex=65c2fb98&is=65b08698&hm=e14f42a1bc4d4fd1ebc88a39e1a9eaa0fd2741bca8f20ed52286bf1b3d5e4fde&" alt="Importance of Green Energy">
+        <div>
+            <h2>Tax Rebates Chart </h2>
+            
+            
+        </div>
+    </section>
+
+    <footer>
+        <p style="font-size: 0.8em;">&copy; 2024 Think Green. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
