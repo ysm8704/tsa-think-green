@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Green</title>
+    <style>
+        /* Your existing styles remain unchanged */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            animation: fadeIn 1s ease-out;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #2ecc71;
+            padding: 1em;
+            text-align: center;
+            color: white;
+        }
+
+       
+
+        .main-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 2em auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+        }
+       
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 1.6em;
+        }
+
+        nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            letter-spacing: 0.15em;
+            display: inline-block;
+            padding: 0.5em 1em;
+            position: relative;
+        }
+
+        nav a:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            background: #000000;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+            font-weight: 500;
+            font-style: bold;
+        }
+
+        nav a:hover:after {
+            width: 100%;
+            left: 0;
+        }
+
+        @media (max-width: 820px) {
+            nav {
+                flex-direction: column;
+                padding: 1em 0;
+            }
+
+            nav a {
+                padding: 0.5em 1em;
+                margin-bottom: 0.5em;
+            }
+
+            #importance-section {
+                flex-direction: column;
+            }
+
+            #importance-section img,
+            #importance-section div {
+                max-width: 100%;
+            }
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin-bottom: 5px;
+            background-color: #333;
+        }
+
+        @media (max-width: 820px) {
+            .navbar-collapse {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .navbar-collapse.show {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        
+        section {
+            flex: 1;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .solution-section {
+            background-color: #ecf0f1;
+            padding: 3em;
+            margin: 2em 0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .solution-section img {
+            width: 100%;
+            max-width: 600px; /* Adjust the maximum width as needed */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-section div {
+            width: 50%;
+            text-align: left;
+        }
+
+        .solution-section h2 {
+            color: #3498db;
+        }
+
+        .solution-section p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        #importance-section {
+            background-color: #ecf0f1;
+            padding: 3em;
+            margin: 2em 0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #importance-section img {
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #importance-section div {
+            width: 50%;
+        }
+
+        #importance-section h2 {
+            color: #3498db;
+        }
+
+        #importance-section p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        
+        
+        /* New styles for additional content */
+        #costs-section {
+            background-color: #ecf0f1;
+            padding: 3em;
+            margin: 2em 0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #costs-section h2 {
+            color: #3498db;
+        }
+
+        #costs-section p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Apply the same animation to the new sections */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <nav class="navbar navbar-expand-lg">
+        <button class="hamburger" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <a href="index.html">Home</a>
+            <a href="energysolutions.html">Home Solutions</a>
+            <a href="cost&rebates.html">Costs & Rebates</a>
+            <a href="greenliving.html">Clean/Green Energy Practices</a>
+            <a href="blog.html"> Blog/News</a>
+            <a href="aboutme.html"> About Me</a>
+        </div>
+    </nav>
+
+    <!-- Blog and News Section -->
+    <section class="sub-section">
+        <h2>Blog and News</h2>
+
+        <!-- Blog Post 1 -->
+        <section class="blog-post">
+            <h2>Exploring Sustainable Energy Solutions</h2>
+            <p>
+               Uncover the power of renewable resources, technological advancements, and eco-conscious practices shaping the way we generate and consume energy.
+            </p>
+            <p>
+                <a href="https://arpa-e.energy.gov/technologies/projects/capturing-co2-exhaust-gas">Read More</a>
+            </p>
+        </section>
+
+        <!-- Blog Post 2 -->
+        <section class="blog-post">
+            <h2>The Importance of Recycling in Our Daily Lives</h2>
+            <p>
+                Discover the significance of recycling in our daily lives. Explore how this simple yet impactful practice plays a crucial role in preserving the environment, conserving resources, and reducing waste. 
+            </p>
+            <p>
+                <a href="https://earth911.com/home-garden/5-tips-to-make-recycling-a-part-of-your-daily-routine/">Read More</a>
+            </p>
+        </section>
+
+        <!-- Add more blog posts as needed -->
+
+    </section>
+<!-- Existing code remains unchanged -->
+
+<!-- Existing code remains unchanged -->
+
+<!-- New section for sign up form with reduced size textboxes -->
+<section class="signup-section">
+    <h2 class="text-center">Sign up for future blog posts!</h2>
+
+    <!-- Signup Form with reduced size textboxes -->
+    <form action="/submit_signup" method="post" class="row g-3 justify-content-center">
+        <div class="col-md-6">
+            <label for="first_name" class="form-label">First Name:</label>
+            <input type="text" id="first_name" name="first_name" class="form-control form-control-sm" required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="last_name" class="form-label">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" class="form-control form-control-sm" required>
+        </div>
+
+        <div class="col-12">
+            <label for="email" class="form-label">Email Address:</label>
+            <input type="email" id="email" name="email" class="form-control form-control-sm" required>
+        </div>
+
+        <div class="col-12">
+            <label for="occupation" class="form-label">Occupation:</label>
+            <input type="text" id="occupation" name="occupation" class="form-control form-control-sm" required>
+        </div>
+
+        <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </div>
+    </form>
+</section>
+
+
+
+    <!-- Your existing footer code remains here -->
+    <footer>
+        <p style="font-size: 0.8em;">&copy; 2024 Think Green. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        hamburger.addEventListener('click', () => {
+            navbarCollapse.classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>

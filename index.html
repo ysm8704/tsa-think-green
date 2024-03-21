@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Green</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 0.75em;
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 1.6em;
+        }
+
+        nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            letter-spacing: 0.15em;
+            display: inline-block;
+            padding: 0.5em 1em;
+            position: relative;
+        }
+
+        nav a:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            background: #000000;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+            font-weight: 500;
+            font-style: bold;
+        }
+
+        nav a:hover:after {
+            width: 100%;
+            left: 0;
+        }
+
+        section {
+            padding: 2em;
+            text-align: center;
+            font-size: larger;
+            position: relative;
+        }
+
+        section:first-of-type {
+
+            color: white;
+            padding: 4em 2em;
+        }
+
+        #importance-section {
+            background-color: #ecf0f1;
+            padding: 2em;
+            margin: 2em 0;
+            box-shadow: 0 0 20px rgba(249, 249, 249, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #importance-section img {
+            max-width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #importance-section div {
+            max-width: 50%;
+            padding: 0 1em;
+        }
+
+        #importance-section h2 {
+            color: #3498db;
+        }
+
+        #importance-section p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .main-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 2em auto;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(237, 237, 237, 0.1);
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 0.5em;
+        }
+
+        #video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+        }
+
+        #video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        section:first-of-type h2,
+        section:first-of-type p {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Media queries for responsive design */
+        @media (max-width: 820px) {
+            nav {
+                flex-direction: column;
+                padding: 1em 0;
+            }
+
+            nav a {
+                padding: 0.5em 1em;
+                margin-bottom: 0.5em;
+            }
+
+            #importance-section {
+                flex-direction: column;
+            }
+
+            #importance-section img,
+            #importance-section div {
+                max-width: 100%;
+            }
+        }
+
+        /* Hamburger menu for smaller screens */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin-bottom: 5px;
+            background-color: #333;
+        }
+
+        @media (max-width: 820px) {
+            .navbar-collapse {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .navbar-collapse.show {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        #video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75%;
+            overflow: hidden;
+            z-index: -1; /* Place the video behind other elements */
+        }
+
+        video {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <button class="hamburger" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <a href="index.html">Home</a>
+            <a href="energysolutions.html">Home Solutions</a>
+            <a href="cost&rebates.html">Costs & Rebates</a>
+            <a href="greenliving.html">Clean/Green Energy Practices</a>
+            <a href="blog.html"> Blog/News</a>
+            <a href="aboutme.html"> About Me</a>
+        </div>
+    </nav>
+
+    <section>
+        <div id="video-container">
+            <video autoplay muted loop>
+                <source src="bgvid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <h2>Welcome to Think Green Solutions</h2>
+        <p>Discover eco-friendly solutions for your home, learn about cost-effective practices, and find out about available rebates.</p>
+    </section>
+
+    <section id="importance-section">
+        <img src="importance-image-url.jpeg" alt="Importance of Green Energy">
+        <div>
+            <h2>Why Switch to Green Energy Initiatives?</h2>
+            <p>Switching to green energy is not just a choice; it's a necessity for a sustainable future. By embracing
+                eco-friendly practices, you contribute to reducing carbon emissions, preserving natural resources, and
+                creating a healthier environment for generations to come. The financial benefits, coupled with the positive
+                impact on our planet, make the switch to green energy an imperative for responsible homeowners.</p>
+        </div>
+    </section>
+
+    <section id="importance-section">
+        <div>
+            <h2>What do we do?</h2>
+            <p>Think Green is your gateway to a sustainable and cost-effective lifestyle. Our diverse range of
+                energy-efficient products, from smart lighting to eco-friendly home systems, empowers you to embrace a
+                greener way of living while enjoying substantial savings. Step into a future where Green Thinking
+                transforms your space, making every corner of your life both environmentally conscious and economically savvy.
+            </p>
+        </div>
+
+        <img src="https://hips.hearstapps.com/hmg-prod/images/2021-06-07-fandel-hhr-ranch5256-1650573390.jpg?crop=0.6666666666666666xw:1xh;center,top&resize=980:*" alt="Importance of Green Energy">
+    </section>
+
+    <footer>
+        <p style="font-size: 0.8em;">&copy; 2024 Think Green. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        hamburger.addEventListener('click', () => {
+            navbarCollapse.classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>

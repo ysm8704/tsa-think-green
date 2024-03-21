@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Clean/Green Energy Practices</title>
+    <style>
+        /* Your existing styles remain here */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            animation: fadeIn 1s ease-out;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #2ecc71;
+            padding: 1em;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 1.6em;
+        }
+
+        nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            letter-spacing: 0.15em;
+            display: inline-block;
+            padding: 0.5em 1em;
+            position: relative;
+        }
+
+        nav a:after {
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            background: #000000;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+            font-weight: 500;
+            font-style: bold;
+        }
+
+        nav a:hover:after {
+            width: 100%;
+            left: 0;
+        }
+
+        @media (max-width: 820px) {
+            nav {
+                flex-direction: column;
+                padding: 1em 0;
+            }
+
+            nav a {
+                padding: 0.5em 1em;
+                margin-bottom: 0.5em;
+            }
+
+            #importance-section {
+                flex-direction: column;
+            }
+
+            #importance-section img,
+            #importance-section div {
+                max-width: 100%;
+            }
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin-bottom: 5px;
+            background-color: #333;
+        }
+
+        @media (max-width: 820px) {
+            .navbar-collapse {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .navbar-collapse.show {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        
+
+        
+        section {
+            flex: 1;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .solution-section {
+            background-color: #ecf0f1;
+            padding: 3em;
+            margin: 2em 0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .solution-section img {
+            width: 100%;
+            max-width: 600px; /* Adjust the maximum width as needed */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .solution-section div {
+            width: 50%;
+            text-align: left;
+        }
+
+        .solution-section h2 {
+            color: #3498db;
+        }
+
+        .solution-section p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        /* Apply the same animation to the new sections */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Additional styles specific to this page */
+        section.sub-section {
+            background-color: #ecf0f1;
+            padding: 3em;
+            margin: 2em 0;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+            text-align: left;
+        }
+
+        section.sub-section h2 {
+            color: #3498db;
+        }
+
+        section.sub-section p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        body {
+    margin: 0;
+    padding: 0;
+    background-image: url("bgvid.mp4"); /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+    background-size: cover; /* Adjusts the background image size to cover the entire body */
+    background-position: center; /* Centers the background image */
+    
+}
+    </style>
+   
+    
+    
+</head>
+
+<body>
+    <!-- Your existing header and navigation code remain here -->
+   
+
+    <nav class="navbar navbar-expand-lg">
+        <button class="hamburger" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <a href="index.html">Home</a>
+            <a href="energysolutions.html">Home Solutions</a>
+            <a href="cost&rebates.html">Costs & Rebates</a>
+            <a href="greenliving.html">Clean/Green Energy Practices</a>
+            <a href="blog.html"> Blog/News</a>
+            <a href="aboutme.html"> About Me</a>
+        </div>
+    </nav>
+
+    <!-- Recycle Section -->
+    <section class="sub-section">
+        <h2>Recycle</h2>
+        <p>How to recycle - <a href="https://www.epa.gov/recycle/how-do-i-recycle-common-recyclables" target="_blank">EPA - How Do I Recycle Common Recyclables</a></p>
+        <p>Where to recycle - <a href="https://recyclenation.com/" target="_blank">RecycleNation</a></p>
+    </section>
+
+    <!-- Carpooling and Public Transportation Section -->
+    <section class="sub-section">
+        <h2>Carpooling and Public Transportation</h2>
+        <p>Types and Benefits</p>
+        <ul>
+            <li>Bus/Rail - <a href="https://www.dart.org/" target="_blank">DART</a></li>
+            <li>Carpool - Uber and Ride</li>
+        </ul>
+       
+    </section>
+
+    <!-- EV Cars Section -->
+    <section class="sub-section">
+        <h2>EV Cars</h2>
+        <p> 
+         Electric cars, also known as electric vehicles (EVs), are automobiles that are powered by electric motors instead of traditional internal combustion engines that rely on gasoline or diesel. These vehicles are know for thier environment benifits and those that are in need of a car can consider these vehicles good investments.
+        </p>
+        <p>
+            <h1>Gas vs Electric Cars Comparison</h1>
+            <table>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Gas Cars</th>
+                    <th>Electric Cars</th>
+                </tr>
+                <tr>
+                    <td>Emission Benefits</td>
+                    <td>Produce tailpipe emissions</td>
+                    <td>Produce lower or zero tailpipe emissions</td>
+                </tr>
+                <tr>
+                    <td>Air Quality</td>
+                    <td>Contribute to air pollution</td>
+                    <td>Contribute to improved air quality</td>
+                </tr>
+                <tr>
+                    <td>Carbon Footprint</td>
+                    <td>Higher carbon footprint</td>
+                    <td>Lower overall carbon footprint, especially with renewable energy</td>
+                </tr>
+                <tr>
+                    <td>Energy Efficiency</td>
+                    <td>Less energy-efficient</td>
+                    <td>More energy-efficient electric motors</td>
+                </tr>
+                <tr>
+                    <td>Cost Savings</td>
+                    <td>Operational costs may be higher</td>
+                    <td>Lower operational costs and maintenance expenses</td>
+                </tr>
+                <tr>
+                    <td>Noise Pollution</td>
+                    <td>Contribute to noise pollution</td>
+                    <td>Quieter operation, reduced noise pollution</td>
+                </tr>
+                <tr>
+                    <td>Energy Independence</td>
+                    <td>Dependent on fossil fuels</td>
+                    <td>Contributes to reduced dependence on fossil fuels</td>
+                </tr>
+                <tr>
+                    <td>Incentives</td>
+                    <td>Limited incentives for gas cars</td>
+                    <td>Governments offer incentives for electric cars</td>
+                </tr>
+            </table>
+            </p>
+            <p>
+                
+               <h><center> <a href="https://chargehub.com/en/countries/united-states/texas/dallas.html" target = "_blank">EV Chargers in Dallas</a></center></h>
+            </p>
+    
+    </section>
+
+  
+    <!-- Things to Do at Home Section -->
+    <section class="sub-section">
+        <h2>Things to Do at Home to Help</h2>
+        <ul>
+            <li><a href="https://www.greenmatch.co.uk/blog/how-to-be-more-eco-friendly" target="_blank">How to Be More Eco-Friendly</a></li>
+            <li><a href="https://www.arborday.org/trees/planting/containerized.cfm" target="_blank">Plant a Tree - Arbor Day</a></li>
+            <li>Sites to Donate to for Planting Trees:
+                <ul>
+                    <li><a href="https://teamtrees.org/" target="_blank">Team Trees</a></li>
+                    <li><a href="https://onetreeplanted.org/" target="_blank">One Tree Planted</a></li>
+                    <li><a href="https://www.fs.usda.gov/working-with-us/donations" target="_blank">USDA - Donations</a></li>
+                </ul>
+            </li>
+            <li><a href="https://www.epa.gov/recycle/composting-home" target="_blank">Compost - How to Compost and Benefits</a></li>
+        
+        </ul>
+    </section>
+
+   
+    <footer>
+        <p style="font-size: 0.8em;">&copy; 2024 Think Green. All rights reserved.</p>
+    </footer>
+    <!-- Your existing footer code remains here -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        hamburger.addEventListener('click', () => {
+            navbarCollapse.classList.toggle('show');
+        });
+    </script>
+</body>
+
+</html>
